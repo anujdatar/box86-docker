@@ -15,9 +15,8 @@ RUN cmake .. -DARM_DYNAREC=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
 RUN make -j$(nproc)
 
 # *********************************************************************
-# prep container for to install box86
+# container to install box86 in
 FROM debian:buster-slim
-ENV DEBIAN_FRONTEND noninteractive
 
 # install dependencies
 RUN apt-get update && \
