@@ -8,9 +8,8 @@ FROM anujdatar/box86
 
 # install/copy your x86 program here
 
-CMD ["/box86/build/box86", "<path-to-x86-executable"]
+CMD ["/box86/build/box86", "path-to-x86-executable"]
 ```
 
-Uses `debian:buster-slim` as the base image. You can also use `python:slim-buster` as the base for the runner image if your target
-application needs python. You'd just have to build the image. Or install python3 on top of this image.
+Uses `debian:buster-slim` as the base image. You can also use `python:slim-buster` as the base for the runner image if your target application needs python. You'd just have to build the image. Or install python3 on top of this image.
 
