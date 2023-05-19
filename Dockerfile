@@ -1,4 +1,4 @@
-FROM python:slim-buster as builder
+FROM python:slim-bullseye as builder
 ENV DEBIAN_FRONTEND noninteractive
 
 # install dependencies
@@ -16,7 +16,7 @@ RUN make -j$(nproc)
 
 # *********************************************************************
 # container to install box86 in
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 
 # install dependencies
 RUN apt-get update && \
