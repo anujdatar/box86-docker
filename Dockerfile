@@ -18,6 +18,12 @@ RUN make -j$(nproc)
 # container to install box86 in
 FROM debian:bullseye-slim
 
+LABEL org.opencontainers.image.source="https://github.com/anujdatar/box86-docker"
+LABEL org.opencontainers.image.description="Box86 running in a docker"
+LABEL org.opencontainers.image.author="Anuj Datar <anuj.datar@gmail.com>"
+LABEL org.opencontainers.image.url="https://github.com/anujdatar/box86-docker/blob/main/README.md"
+LABEL org.opencontainers.image.licenses=MIT
+
 # install dependencies
 RUN apt-get update && \
     apt-get upgrade -y && \
